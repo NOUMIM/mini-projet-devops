@@ -2,15 +2,29 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Formations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des formations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Liste des formations</h1>
-    <ul>
-        {% for formation in formations %}
-            <li>{{ formation }}</li>
-        {% endfor %}
-    </ul>
-    <a href="/">Retour à l'accueil</a>
+    <main class="container page-content">
+        <section class="page-header">
+            <h1>Liste des formations</h1>
+            <p>Voici les formations disponibles dans l'application.</p>
+        </section>
+
+        <section class="formations-grid">
+            {% for formation in formations %}
+            <div class="formation-card">
+                <h2>{{ formation.titre }}</h2>
+                <p>{{ formation.description }}</p>
+            </div>
+            {% endfor %}
+        </section>
+
+        <div class="back-area">
+            <a href="/" class="btn secondary">Retour à l'accueil</a>
+        </div>
+    </main>
 </body>
 </html>

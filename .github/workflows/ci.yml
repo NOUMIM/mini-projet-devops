@@ -22,7 +22,7 @@ jobs:
       - name: Installation des dépendances
         run: pip install -r requirements.txt
 
-      - name: Test simple de syntaxe Python
+      - name: Vérification syntaxique
         run: python -m py_compile app.py
 
       - name: Construction de l'image Docker

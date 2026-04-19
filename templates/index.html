@@ -2,11 +2,45 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Accueil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Application des formations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Bienvenue sur l'application des formations</h1>
-    <p>Cette application permet d'afficher une liste simple de formations.</p>
-    <a href="/formations">Voir la liste des formations</a>
+    <header class="hero">
+        <div class="container">
+            <h1>Application des formations</h1>
+            <p>
+                Une petite application Flask moderne pour afficher une liste
+                de formations dans le cadre du mini-projet DevOps.
+            </p>
+            <a href="/formations" class="btn">Voir les formations</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="features">
+            <div class="card">
+                <h2>Interface moderne</h2>
+                <p>
+                    Un front-end plus propre et plus agréable visuellement.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Projet pédagogique</h2>
+                <p>
+                    Une base simple pour comprendre Flask, Docker et CI/CD.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Architecture claire</h2>
+                <p>
+                    Séparation entre back-end, templates HTML et fichiers statiques.
+                </p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
